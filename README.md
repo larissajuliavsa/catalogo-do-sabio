@@ -1,6 +1,6 @@
 ## Como rodar o projeto
 
-### Pré-requisitos
+### Tecnologias Utilizadas
 - Java 21
 - Maven
 - Docker e Docker Compose
