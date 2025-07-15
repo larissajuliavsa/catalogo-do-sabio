@@ -81,4 +81,9 @@ docker-compose up -d
 
 # 3. Rode a aplicação
 ./mvnw spring-boot:run
+
+# 4. Acessar
+http://localhost:8080/books
+http://localhost:8080/books/author/maria
+http://localhost:8080/books/genre/humor
 ```
