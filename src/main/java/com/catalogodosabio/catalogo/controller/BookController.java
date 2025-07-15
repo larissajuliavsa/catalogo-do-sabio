@@ -19,17 +19,11 @@ public class BookController {
     @Autowired
     private BookService service;
 
-//    @GetMapping
-//    public ResponseEntity<List<Book>> getAllBooks() {
-//        return ResponseEntity.ok(service.findAll());
-//    }
-
     @GetMapping("/{id}")
     public ResponseEntity<Book> getBookById(@PathVariable Long id) {
-        return service.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
+      Book book = service.findById(id);
+      return ResponseEntity.ok(book);
+    };
 
     @GetMapping("/genre/{genre}")
     public ResponseEntity<List<Book>> getBooksByGenre(@PathVariable String genre) {
