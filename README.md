@@ -84,6 +84,7 @@ docker-compose up -d
 
 # 4. Acessar
 http://localhost:8080/books
+http://localhost:8080/books/1
 http://localhost:8080/books/author/maria
 http://localhost:8080/books/genre/humor
 ```
