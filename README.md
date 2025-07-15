@@ -12,7 +12,7 @@ API desenvolvida para uma livraria fictícia com o objetivo de listar e consulta
 - **Spring Boot 3.2.5**
     - Spring Web
     - Spring Data JPA
-    - Spring Cache (Redis)
+    - Spring Cache Redis
 - **PostgreSQL** como banco de dados relacional
 - **Redis** para cache de dados
 - **Maven** como gerenciador de dependências
