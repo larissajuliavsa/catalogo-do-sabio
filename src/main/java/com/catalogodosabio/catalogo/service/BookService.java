@@ -30,7 +30,7 @@ public class BookService {
 
     @Cacheable(value = "booksByGenre", key = "#genre.toLowerCase()")
     public List<Book> findByGenre(String genre) {
-        List<Book> books = repository.findByGenreIgnoreCase(genre);
+        List<Book> books = repository.findByGenreContainingIgnoreCase(genre);
         if (books.isEmpty()) {
             throw new ResourceNotFoundException("Gênero não encontrado: " + genre);
         }
@@ -39,7 +39,7 @@ public class BookService {
 
     @Cacheable(value = "booksByAuthor", key = "#author.toLowerCase()")
     public List<Book> findByAuthor(String author) {
-        List<Book> books = repository.findByAuthorIgnoreCase(author);
+        List<Book> books = repository.findByAuthorContainingIgnoreCase(author);
         if (books.isEmpty()) {
             throw new ResourceNotFoundException("Autor não encontrado: " + author);
         }
