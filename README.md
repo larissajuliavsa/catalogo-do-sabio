@@ -44,7 +44,7 @@ A arquitetura foi desenvolvida com base em:
 - `GET /books/author/{author}`: Busca livros por autor contendo o texto informado.
 - Dados são populados automaticamente com 50 livros gerados via DataFaker.
 
-### Lógica de Negócio
+### Regras de Negócio
 
 - As buscas por gênero e autor utilizam métodos `findByGenreContainingIgnoreCase` e `findByAuthorContainingIgnoreCase` no `BookRepository`;
 - Caso o resultado seja vazio, uma exceção `ResourceNotFoundException` é lançada e tratada por `GlobalExceptionHandler`, retornando mensagem clara e código HTTP 404;
